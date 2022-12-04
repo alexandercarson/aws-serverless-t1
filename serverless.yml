@@ -1,0 +1,14 @@
+org: josephcarson
+app: aws-express-test
+service: aws-express-test
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi: "*"
